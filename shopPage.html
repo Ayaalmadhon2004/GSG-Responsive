@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goods Page</title>
+  <link rel="stylesheet" href="shop.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+  <div class="top-bar">
+    <div class="contact">
+      <span><i class="fas fa-phone"></i> (980) 123 456 78</span>
+      <span><i class="fas fa-envelope"></i> Manager Email</span>
+    </div>
+    <ul class="details">
+      <li>Location store</li>
+      <li>Blog</li>
+      <li>Guarantee</li>
+      <li>Payment</li>
+      <li>Delivery</li>
+      <li>Sign up</li>
+    </ul>
+  </div>
+
+  <header>
+    <div class="logo">YOU<span>SHOP</span></div>
+    <span>Desription of your<br> online store</span>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products...">
+      <button>Search</button>
+    </div>
+    <span>7 days a week from<br> 8:00 am to 5:00 pm</span>
+    <div class="cart"><i class="fa-solid fa-cart-shopping"></i>   My Cart</div>
+  </header>
+
+  <nav class="nav-category">
+    <ul class="nav-list">
+      <li><a href="#" class="active">All Categories</a></li>
+      <li><a href="#">Apple</a></li>
+      <li><a href="#">Samsung</a></li>
+      <li><a href="#">Meizu</a></li>
+      <li><a href="#">Xiaomi</a></li>
+      <li><a href="#">Huawei</a></li>
+      <li><a href="#">Oppo</a></li>
+      <li><a href="#">Vivo</a></li>
+    </ul>
+  </nav>
+<div class="container">
+  <aside>
+
+    <div class="sidebar">
+
+      <!-- Categories -->
+      <details open>
+        <summary>Related Categories</summary>
+        <p class="details-p">Tablet & Laptops Accessories</p>
+      </details>
+
+      <!-- Refine by -->
+      <details open>
+        <summary>Refine by</summary>
+        <div class="filter-option">Android 6.0 ❌</div>
+        <a href="#" style="color: orange; font-size: 12px;">Clear All</a>
+      </details>
+
+      <!-- Price -->
+      <details>
+        <summary>Price</summary>
+        <div class="price-range">
+          <input type="range" min="55" max="5000" value="1000">
+          <p class="details-p">Price: $55 – $5000</p>
+        </div>
+      </details>
+
+      <!-- Operating System -->
+      <details>
+        <summary>Operating System</summary>
+        <div class="filter-option" style="color: orange;">Android 6.0</div>
+        <div class="filter-option">Android 5.1</div>
+        <div class="filter-option">Android 5.0</div>
+        <div class="filter-option">Android 4.4</div>
+      </details>
+
+      <!-- Screen Size -->
+      <details>
+        <summary>Screen Size</summary>
+        <div class="filter-option">1920×1200</div>
+        <div class="filter-option">1280×800</div>
+        <div class="filter-option">2560×1600</div>
+        <div class="filter-option">1920×1080</div>
+        <div class="filter-option">2048×1536</div>
+        <div class="filter-option">1920×1280</div>
+        <div class="filter-option">1024×600</div>
+      </details>
+
+      <!-- Processor Core -->
+      <details class="filter-group">
+        <summary>Processor Core</summary>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox" name="processor" value="Quad Core"> Quad Core
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="processor" value="Octa Core"> Octa Core
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="processor" value="16GB"> 16GB
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="processor" value="32GB"> 32GB
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="processor" value="64GB"> 64GB
+          </label>
+        </div>
+      </details>
+
+      <!-- Tablet Data Capacity -->
+      <details class="filter-group">
+        <summary>Tablet Data Capacity</summary>
+        <div class="filter-options">
+          <label class="filter-option">
+            <input type="checkbox" name="tablet" value="16GB"> 16GB
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="tablet" value="32GB"> 32GB
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" name="tablet" value="64GB"> 64GB
+          </label>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="product">
+    <h2>Product Tags</h2>
+    <div class="tags-container">
+      <span class="tag">Asus Tablet</span>
+      <span class="tag">Windows Tablet</span>
+      <span class="tag">Xiaomi Tablet</span>
+      <span class="tag active">Hover Me</span>
+    </div>
+    </div>
+
+  </aside>
+
+    <main class="products">
+      <div class="products-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet </h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+         <!-- Product 1 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+         <!-- Product 1 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+          <img src="assets/person-using-tablet.webp" alt="Jumper 10 inch Tablet PC">
+          <div class="product-info">
+            <h4 class="product-name">FULCOL 10 inch Tablet PC Octa</h4>
+            <div class="rating">★★★★☆</div>
+            <div class="price">$312.99</div>
+          </div>
+
+          <div class="hover-product">
+            <button class="add-to-cart">Add to cart</button>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </div>
+
+        
+      </div>
+
+      <div class="pagination">
+        <button class="active">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>Next</button>
+      </div>
+
+      <div class="recently-viewed">
+        <h3>Recently Viewed</h3>
+        <div class="products-grid">
+          <div class="product-card">
+            <img src="assets/person-using-tablet.webp" alt="product">
+            <h4>Tablet 1</h4>
+          </div>
+          <div class="product-card">
+            <img src="assets/person-using-tablet.webp" alt="product">
+            <h4>Tablet 2</h4>
+          </div>
+          <div class="product-card">
+            <img src="assets/person-using-tablet.webp" alt="product">
+            <h4>Tablet 3</h4>
+          </div>
+          <div class="product-card">
+            <img src="assets/person-using-tablet.webp" alt="product">
+            <h4>Tablet 3</h4>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <div class="keywords-section">
+    <h2>Most Search Keywords</h2>
+
+    <!-- Laptops -->
+    <div class="category">Laptops:</div>
+    <div class="keywords">
+      <a href="#" class="keyword">Apple Laptop</a>
+      <a href="#" class="keyword">Acero Laptop</a>
+      <a href="#" class="keyword">Samsung Laptop</a>
+      <a href="#" class="keyword">Lenovo Laptop</a>
+      <a href="#" class="keyword">Sony Laptop</a>
+      <a href="#" class="keyword">Dell Laptop</a>
+      <a href="#" class="keyword">Asuso Laptop</a>
+      <a href="#" class="keyword">Toshiba Laptop</a>
+      <a href="#" class="keyword">LG Laptop</a>
+      <a href="#" class="keyword">HP Laptop</a>
+    </div>
+
+    <!-- Tablet -->
+    <div class="category">Tablet:</div>
+    <div class="keywords">
+      <a href="#" class="keyword">FUKIO Watches</a>
+      <a href="#" class="keyword">Titan Watches</a>
+      <a href="#" class="keyword">Casio Watches</a>
+      <a href="#" class="keyword">Fasttrack Watches</a>
+      <a href="#" class="keyword">Timex Watches</a>
+      <a href="#" class="keyword">Fossil Watches</a>
+      <a href="#" class="keyword">Diesel Watches</a>
+      <a href="#" class="keyword">Toshiba Watches</a>
+      <a href="#" class="keyword">Luxury Watches</a>
+    </div>
+
+    <!-- Mobile Phone: Shoes -->
+    <div class="category">Mobile phone: Shoes</div>
+    <div class="keywords">
+      <a href="#" class="keyword">Shoes</a>
+      <a href="#" class="keyword">Casual Shoes</a>
+      <a href="#" class="keyword">Sports Shoes</a>
+      <a href="#" class="keyword">Adidas Shoes</a>
+      <a href="#" class="keyword">Gas Shoes</a>
+      <a href="#" class="keyword">Puma Shoes</a>
+      <a href="#" class="keyword">Reebok Shoes</a>
+      <a href="#" class="keyword">Woodland Shoes</a>
+      <a href="#" class="keyword">Red Tape Shoes</a>
+      <a href="#" class="keyword">Kilan Shoes</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-sections">
+      <div class="contactUs footing">
+        <h4>Contact Us</h4>
+        <ul class="contact-us">
+          <li>(+900) 123 456 789</li>
+          <li>manager@gmail.com</li>
+          <li>Location store</li>
+        </ul>
+      </div>
+
+      <div class="politics footing">
+        <h4>Politics & Info</h4>
+        <ul class="politics">
+          <li>Terms Conditions</li>
+          <li>Policy for Sellers</li>
+          <li>Policy for Buyers</li>
+          <li>Shipping & Refund</li>
+          <li>Wholesale Policy</li>
+        </ul>
+      </div>
+
+      <div class="quickLinks footing">
+        <h4>Quick Links</h4>
+        <ul class="QuickLinks">
+          <li>Seller Login</li>
+          <li>Seller Sign up</li>
+          <li>Seller Handbook</li>
+          <li>Seller Control</li>
+          <li>Panel Seller FAQs</li>
+        </ul>
+      </div>
+
+      <div class="myAccount footing">
+        <h4>My Account</h4>
+        <ul class="account">
+          <li>Accessories</li>
+          <li>Balcony Tabi</li>
+          <li>Bar Units</li>
+          <li>Beds</li>
+          <li>Bedside Tables</li>
+        </ul>
+      </div>
+
+      <div class="subscribe footing">
+        <h4>Subscribe now</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <input type="text" placeholder="your Email address">
+        <div class="social-media"></div>
+      </div>
+    </div>
+    <p>Copyright c 2025 Aya Almadhon</p>
+  </footer>
+</body>
+</html>

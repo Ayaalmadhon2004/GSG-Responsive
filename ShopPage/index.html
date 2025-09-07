@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goods Page</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-y0H0MlO+Ygq6n/LOa5QJkO+FHEF8dYc+gV2/v3M7XQpxCMuzn0p44FQmsbJDz4F+eGg5U2l7O3t9FfC7z9JjTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+/* Root variables */
+:root {
+    --primary-color: #ef4444;       /* Red accent */
+    --secondary-color: #374151;     /* Dark nav color */
+    --topbar-bg: #1f2937;           /* Top bar */
+    --header-bg: #fff;
+    --card-bg: #fff;
+    --footer-bg: #1f2937;
+    --body-bg: #f0f2f5;
+    --text-color: #111827;
+    --subtext-color: #555;
+    --border-color: #ddd;
+    --hover-color: #ff932d;
+    --p-size:.7rem;
+}
+
+/* Reset & base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Top bar */
+.top-bar{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--topbar-bg);
+    color:#fff;
+    padding:.5rem;
+    font-size:.8rem;
+}
+
+.top-bar .details{
+    display:flex;
+    list-style:none;
+    gap:15px;
+}
+
+.contact span{
+    margin-right:15px;
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.nav-list.active{
+    background-color: var(--primary-color);
+    color:#fff;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header .logo {
+    font-weight: bold;
+    font-size: 28px;
+    color: var(--text-color);
+}
+
+header .logo span {
+    color: var(--primary-color);
+}
+
+header .search-bar {
+    flex: 1;
+    display: flex;
+    max-width: 400px;
+}
+
+header .search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+header .search-bar button {
+    padding: 10px 15px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+header .search-bar button:hover {
+    background-color: var(--hover-color);
+    border-color: var(--hover-color);
+}
+
+header span{
+    font-size:var(--p-size);
+}
+
+/* Navigation */
+.nav-category {
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--topbar-bg);
+    white-space: nowrap;
+}
+
+.nav-category .nav-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-category .nav-list li {
+    margin: 0;
+}
+
+.nav-category .nav-list a {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-category .nav-list a:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+    border-radius: 6px;
+}
+
+.nav-category .nav-list a.active {
+    background-color: var(--primary-color);
+    border-radius: 6px;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+.sidebar label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+/* Products */
+.products {
+    flex: 1;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.product-card p {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.pagination button {
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    background-color: var(--card-bg);
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.pagination button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+/* Recently Viewed */
+.recently-viewed {
+    background-color: var(--card-bg);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.recently-viewed h3 {
+    margin-bottom: 15px;
+}
+
+.recently-viewed .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+
+    .top-bar .contact {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .top-bar .details {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+    <div class="contact">
+        <span><i class="fas fa-phone"></i> (980) 123 456 78</span>
+        <span><i class="fas fa-envelope"></i> Manager Email</span>
+    </div>
+    <ul class="details">
+        <li>Location store</li>
+        <li>Blog</li>
+        <li>Guarantee</li>
+        <li>Payment</li>
+        <li>Delivery</li>
+        <li>Sign up</li>
+    </ul>
+</div>
+
+<header>
+    <div class="logo">YOU<span>SHOP</span></div>
+    <span>Desription of your<br> online store</span>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for products...">
+        <button>Search</button>
+    </div>
+    <span>7 days a week from<br> 8:00 am to 5:00 pm</span>
+    <div class="cart">🛒 My Cart</div>
+</header>
+
+<nav class="nav-category">
+    <ul class="nav-list">
+        <li><a href="#" class="active">All Categories</a></li>
+        <li><a href="#">Apple</a></li>
+        <li><a href="#">Samsung</a></li>
+        <li><a href="#">Meizu</a></li>
+        <li><a href="#">Xiaomi</a></li>
+        <li><a href="#">Huawei</a></li>
+        <li><a href="#">Oppo</a></li>
+        <li><a href="#">Vivo</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <aside class="sidebar">
+        <h3>Filters</h3>
+        <label>Category</label>
+        <select>
+            <option>Tablet & Laptop Accessories</option>
+            <option>Smartphones</option>
+        </select>
+
+        <label>Brand</label>
+        <select>
+            <option>Apple</option>
+            <option>Samsung</option>
+            <option>Xiaomi</option>
+        </select>
+
+        <label>Price</label>
+        <input type="range" min="50" max="1000">
+
+        <label>Operating System</label>
+        <select>
+            <option>Android</option>
+            <option>iOS</option>
+        </select>
+        <details>
+    <summary>Tablet Data Capacity</summary>
+    <div class="filter-option">16GB</div>
+    <div class="filter-option">32GB</div>
+    <div class="filter-option">64GB</div>
+  </details>
+    </aside>
+
+    <main class="products">
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 1</h4>
+                <p>$299.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 2</h4>
+                <p>$159.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 3</h4>
+                <p>$421.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 4</h4>
+                <p>$156.00</p>
+            </div>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 1</h4>
+                <p>$299.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 2</h4>
+                <p>$159.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 3</h4>
+                <p>$421.99</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="product">
+                <h4>Tablet 4</h4>
+                <p>$156.00</p>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="active">1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>Next</button>
+        </div>
+
+        <div class="recently-viewed">
+            <h3>Recently Viewed</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100" alt="product">
+                    <h4>Tablet 1</h4>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100" alt="product">
+                    <h4>Tablet 2</h4>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/100" alt="product">
+                    <h4>Tablet 3</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="footer-sections">
+      <div class="contactUs">
+        <h4>Contact Us</h4>
+        <ul class="contact">
+         <li>(+900) 123 456 789</li>
+         <li>manager@gmail.com</li>
+         <li>Location store</li>
+        </ul>
+      </div>
+    </div>
+    <p>Copyright c 2025 Aya Almadhon</p>
+</footer>
+
+</body>
+</html>
