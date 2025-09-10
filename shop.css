@@ -24,7 +24,7 @@
   --font-480:.6rem;
 
   /* Paddings */
-  --top-padding: 10px 0px;
+  --top-padding: 10px 140px;
   --normal-padding: 10px 140px;
   --padding-786: 10px 60px;
   --padding-480: 10px 20px;
@@ -61,7 +61,7 @@ img {
 .top-bar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--secondary-color);
   color: #fff;
   padding: var(--top-padding);
@@ -88,7 +88,7 @@ header {
   background-color: var(--header-bg);
   display: flex;
   align-items: center;
-  gap:6%;
+  gap:8%;
   flex-wrap: wrap;
   padding: var(--normal-padding);
   border-bottom: 1px solid var(--border-color);
@@ -156,7 +156,7 @@ header span {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 10px;
+  gap:3%;
 }
 .nav-list .active{
   width:20vw;
@@ -351,16 +351,18 @@ aside{
 
 .product-card {
   background: var(--card-bg);
+  height:auto;
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 15px;
   text-align: center;
+  justify-content: start;
   transition: all 0.3s ease;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 }
 
 .product-card img {
-  max-height: 150px;
+  max-height: 90px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -557,10 +559,6 @@ footer p {
     width:100%;
   }
 
-  header span{
-   display: none;
-  }
-
   .products-grid {
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
@@ -576,6 +574,11 @@ footer p {
   font-size:15px;
   margin-left:.2rem;
 }
+header {
+  gap:2%;
+}
+
+
 }
 @media (max-width: 992px) {
   header, .top-bar, .nav-category , .container  {
@@ -602,6 +605,12 @@ footer p {
   font-size:15px;
   margin-left:.2rem;
 }
+.nav-category .nav-list {
+  gap:1%;
+}
+ header{
+    gap:9%;
+  }
 }
 @media (max-width: 768px) {
   header, .top-bar, .nav-category , .container  {
@@ -612,6 +621,10 @@ footer p {
 
   header span{
    display: none;
+  }
+
+  header{
+    gap:8%;
   }
 
   .products-grid {
@@ -627,6 +640,9 @@ footer p {
   padding: 3px 5px;
   font-size:15px;
   margin-left:.2rem;
+}
+.nav-category .nav-list {
+  gap:2%;
 }
 }
 @media (max-width: 480px) {
@@ -685,6 +701,16 @@ summary {
 .product h2 {
   font-size: 1rem;
 }
+.product-card{
+  padding:3px;
+}
+ img{
+  height:50px;
+}
+.add-to-cart{
+  font-size:7px;
+  padding:2px;
+}
 .product-card p {
     font-size: var(--font-480);
 }
@@ -696,6 +722,9 @@ summary {
 }
 .product-info .price{
   font-size:var(--font-480);
+}
+.nav-category .nav-list {
+  gap:2.5%;
 }
 
 }
